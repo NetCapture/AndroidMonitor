@@ -12,7 +12,7 @@
 
 添加依赖
 ```
-   debugImplementation 'io.github.lygttpod:monitor:0.1.1'
+   debugImplementation 'io.github.lygttpod:monitor:0.1.2'
 ```
 -备注： 使用debugImplementation是为了只在测试环境中引入
 
