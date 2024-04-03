@@ -8,7 +8,6 @@
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs/dayjs.min.js"></script>
     <link href="https://cdn.bootcdn.net/ajax/libs/jquery-jsonview/1.2.3/jquery.jsonview.css"
           rel="stylesheet">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery-jsonview/1.2.3/jquery.jsonview.js"></script>
@@ -432,7 +431,7 @@
                 span = '<span class="label label-danger">' + data.source + '</span>';
             }
 
-            span += spanStyle + getFormatDate(data.requestDate) + '</span>';
+            span += spanStyle + data.requestTime + '</span>';
             span += spanStyle + data.responseCode + '</span>';
             span += spanStyle + data.method + '</span>';
             var duration;
@@ -456,15 +455,6 @@
             }
 
             return span;
-        }
-
-        /**
-         *格式化请求时间
-         * @param date
-         * @returns {*}
-         */
-        function getFormatDate(date) {
-            return dayjs(date).format('YYYY-MM-DD HH:mm:ss')
         }
 
         /**
